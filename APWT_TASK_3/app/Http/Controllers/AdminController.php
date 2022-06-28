@@ -90,7 +90,7 @@ class AdminController extends Controller
         return view('admin.admindash');
     }
     public function profileEdit(Request $request){
-        $user = Users::where('name', $request->name)->first();
+        $user = Pharmacist::where('name', $request->name)->first();
 
         $user->name = $request->name;
         $user->email = $request->email;

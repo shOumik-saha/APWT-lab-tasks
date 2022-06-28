@@ -74,11 +74,11 @@ class pagesController extends Controller
     }
     public function profile(Request $request){
         $user_name = session()->get('user');
-        $user = Users::where('name', $user_name)->first();
+        $user = Pharmasict::where('name', $user_name)->first();
         return view('user.profileUser')->with('user', $user);   
     }
     public function profileEdit(Request $request){
-        $user = Users::where('name', $request->name)->where('role', 'user')->first();
+        $user = Pharmasict::where('name', $request->name)->where('role', 'user')->first();
 
         $user->name = $request->name;
         $user->email = $request->email;

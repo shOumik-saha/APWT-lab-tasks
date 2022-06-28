@@ -85,7 +85,7 @@ class UsersController extends Controller
     }
     public function userlist()
     {
-        $users = Users::paginate(3);
+        $users = Pharmacist::paginate(3);
         return view('users.profileUser')->with('users', $users);
     }
     public function homeuser(){
