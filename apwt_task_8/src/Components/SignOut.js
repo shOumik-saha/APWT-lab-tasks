@@ -16,10 +16,5 @@ const SignOut = () => {
     }).catch(err=>{
         console.log(err);
     });
-    return (
-        <div>
-        <h1> Signed Out </h1> 
-        </div>
-    )
 }
 export default SignOut

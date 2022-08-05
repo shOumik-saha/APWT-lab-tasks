@@ -1,8 +1,10 @@
 import React , {useState, useEffect} from "react";
 import User from './User';
 import Instance from "./Instance";
+
 const UserList = ()=>{
 const [users, setUsers] = useState([]);
+
 useEffect(()=>{
     Instance.get("/Users/list")
     .then(resp=>{
@@ -12,6 +14,7 @@ useEffect(()=>{
     console.log(err);
 });
 },[]);
+
 return(
     <div>
         {
@@ -21,5 +24,6 @@ return(
         }
     </div>
 )
+
 }
 export default UserList;
